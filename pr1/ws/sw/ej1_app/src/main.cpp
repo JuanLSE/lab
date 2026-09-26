@@ -11,6 +11,7 @@ XScuTimer TimerInstance;
 
 int main(){
     int Status;
+    sampleOutX_t DataOut[FFT_LENGTH];
     xil_printf("Hola mundo\n");
 
     XScuTimer_Config *ConfigPtr;
@@ -25,11 +26,12 @@ int main(){
     XScuTimer_EnableAutoReload(&TimerInstance);
 
     XScuTimer_LoadTimer(&TimerInstance,TIMER_LOAD_VALUE);
-    
 
-    sampleOutX_t DataOut[FFT_LENGTH];
+    XScuTimer_Start(&TimerInstance);
+
     FlexFFT(DataIn, DataOut);
     
+    XScuTimer_Stop(&TimerInstance);
 
     
     return 0;

@@ -1,3 +1,4 @@
+#include "xil_types.h"
 #include "xil_printf.h"
 #include "Flexfft.h"
 #include "DataIn.h"
@@ -35,11 +36,13 @@ int main(){
     FlexFFT(DataIn, DataOut);
     XScuTimer_Stop(&TimerInstance);
 
-    u32 loop_ticks = TIMER_LOAD_VALUE - XScuTimer_GetCounterValue(&TimerInstance);
-    u32 sec_interval = loop_ticks/TIMER_FREQ;
-    xil_printf("FlexFFT took: %lu ticks\nInterval in seconds: %lu", 
-        loop_ticks,
-        sec_interval);
+    u32 load       = XScuTimer_GetLoadReg(TIMER_DEVICE_BASEADDR);
+    u32 loop_ticks = load - XScuTimer_GetCounterValue(&TimerInstance);
+    u32 us_interval = (u32)(((u64)loop_ticks * 1000000ULL) / (u64)TIMER_FREQ);
+    xil_printf("FlexFFT took: %u ticks\nInterval: %u ms %u us\n",
+        (unsigned int)loop_ticks,
+        (unsigned int)(us_interval / 1000U),
+        (unsigned int)(us_interval % 1000U));
     
     
     return 0;

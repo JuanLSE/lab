@@ -1,2 +1,22 @@
 pr1/ws/hw/project_1.xpr
 **/ws/hw/project_1*
+
+# Todo lo que haya dentro de sw, ignorado
+**/ws/sw/**
+
+# Solo permito entrar al primer nivel dentro de sw (apps/proyectos)
+!**/ws/sw/*/
+
+# Solo permito la carpeta src dentro de cada app
+!**/ws/sw/*/src/
+
+# Solo permito contenido de src
+!**/ws/sw/*/src/**
+
+# Vivado cache/state
+**/.cache/**
+**/.Xil/**
+**/xsim.dir/**
+**/*.jou
+**/*.log
+**/*.str

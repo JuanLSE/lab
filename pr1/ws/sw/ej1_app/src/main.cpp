@@ -2,10 +2,12 @@
 #include "Flexfft.h"
 #include "DataIn.h"
 #include "xparameters.h"
+#include "xparameters_ps.h"
 #include "xscutimer.h"
 
 #define TIMER_DEVICE_BASEADDR XPAR_XSCUTIMER_0_BASEADDR
 #define TIMER_LOAD_VALUE 0xFFFFFFFF
+#define TIMER_FREQ (XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ/ 2U)
 
 XScuTimer TimerInstance;
 
@@ -34,8 +36,11 @@ int main(){
     XScuTimer_Stop(&TimerInstance);
 
     u32 loop_ticks = TIMER_LOAD_VALUE - XScuTimer_GetCounterValue(&TimerInstance);
-    xil_printf("FlexFFT took: %lu ticks\n", loop_ticks);
-
+    u32 sec_interval = loop_ticks/TIMER_FREQ;
+    xil_printf("FlexFFT took: %lu ticks\nInterval in seconds: %lu", 
+        loop_ticks,
+        sec_interval);
+    
     
     return 0;
 }

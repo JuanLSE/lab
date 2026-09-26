@@ -5,7 +5,7 @@
 #include "xscutimer.h"
 
 #define TIMER_DEVICE_BASEADDR XPAR_XSCUTIMER_0_BASEADDR
-#define TIMER_LOAD_VALUE 0xFFFF
+#define TIMER_LOAD_VALUE 0xFFFFFFFF
 
 XScuTimer TimerInstance;
 
@@ -16,22 +16,25 @@ int main(){
 
     XScuTimer_Config *ConfigPtr;
     ConfigPtr = XScuTimer_LookupConfig(TIMER_DEVICE_BASEADDR);
+    if (ConfigPtr == NULL) { xil_printf("LookupConfig failed\n"); return XST_FAILURE; }
 
-    XScuTimer_CfgInitialize(&TimerInstance, ConfigPtr, ConfigPtr)
+
+    Status = XScuTimer_CfgInitialize(&TimerInstance, ConfigPtr, TIMER_DEVICE_BASEADDR);
 	if (Status != XST_SUCCESS) {
-        xil_printf("No se pudo inicializar el la configuración del timer\n");
+        xil_printf("Timer init failed: %d\n", Status);
 		return XST_FAILURE;
 	}
 
-    XScuTimer_EnableAutoReload(&TimerInstance);
-
+    //XScuTimer_EnableAutoReload(&TimerInstance);
+    XScuTimer_DisableAutoReload(&TimerInstance);
     XScuTimer_LoadTimer(&TimerInstance,TIMER_LOAD_VALUE);
 
     XScuTimer_Start(&TimerInstance);
-
     FlexFFT(DataIn, DataOut);
-    
     XScuTimer_Stop(&TimerInstance);
+
+    u32 loop_ticks = TIMER_LOAD_VALUE - XScuTimer_GetCounterValue(&TimerInstance);
+    xil_printf("FlexFFT took: %lu ticks\n", loop_ticks);
 
     
     return 0;

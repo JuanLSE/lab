@@ -28,3 +28,10 @@ pr1/ws/hw/project_1.xpr
 
 # README generado por la plantilla de Vitis
 **/ws/sw/**/src/README.txt
+
+lab.code-workspace
+README.md
+.vscode/launch.json
+.vscode/settings.json
+pr1/.vscode/c_cpp_properties.json
+pr1/.vscode/settings.json

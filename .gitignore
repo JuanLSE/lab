@@ -20,3 +20,11 @@ pr1/ws/hw/project_1.xpr
 **/*.jou
 **/*.log
 **/*.str
+
+# Archivos generados por Vitis dentro de src
+**/ws/sw/**/src/.clangd
+**/ws/sw/**/src/compile_commands.json
+**/ws/sw/**/src/Empty_applicationExample.cmake
+
+# README generado por la plantilla de Vitis
+**/ws/sw/**/src/README.txt

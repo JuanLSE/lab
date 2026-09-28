@@ -1,108 +1,77 @@
 /*
- * Empty C++ Application
+ *  Copyright 2011-16 ARM Limited and Contributors.
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *    * Redistributions of source code must retain the above copyright
+ *      notice, this list of conditions and the following disclaimer.
+ *    * Redistributions in binary form must reproduce the above copyright
+ *      notice, this list of conditions and the following disclaimer in the
+ *      documentation and/or other materials provided with the distribution.
+ *    * Neither the name of ARM Limited nor the
+ *      names of its contributors may be used to endorse or promote products
+ *      derived from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY ARM LIMITED AND CONTRIBUTORS "AS IS" AND
+ *  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL ARM LIMITED AND CONTRIBUTORS BE LIABLE FOR ANY
+ *  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ *  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ *  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include <stdio.h>
-#include "xparameters.h"
-#include "xil_printf.h"
+#include <stdlib.h>
 
-#include <complex>
-using namespace std;
-typedef std::complex<float> sampleInX_t;
-typedef std::complex<float> sampleOutX_t;
+#include "NE10.h"
 
-#define FFT_LENGTH 512
+#define SAMPLES 16
 
-#include "DataIn.h"
-#include "DataOut_OK.h"
-
-// NEON libraries
-#include "Ne10.h"
-
-// Timer libraries
-//#include "xtime_l.h"
-
-// Number of FFT points
-#define NFFT FFT_LENGTH
-
-// Number of iterations
-#define TEST_SAMPLES	1000
-
-
-int main()
+/**
+ * @example NE10_sample_complex_fft.c
+ * An example of using the complex-to-complex FFT functions.
+ */
+int main(void)
 {
-	printf("*****************************************************\n");
-	printf("***  Launching the FFT test program (%d) ***\n", NFFT);
-	printf("******************************************************\n");
+    ne10_fft_cpx_float32_t src[SAMPLES]; // A source array of input data
+    ne10_fft_cpx_float32_t dst[SAMPLES]; // A destination array for the transformed data
+    ne10_fft_cfg_float32_t cfg;          // An FFT "configuration structure"
 
+    // Initialise Ne10, using hardware auto-detection to set library function pointers
+    if (ne10_init() != NE10_OK)
+    {
+        fprintf(stderr, "Failed to initialise Ne10.\n");
+        return 1;
+    }
 
-	// Size of FFT
-	ne10_int32_t fftSize = NFFT;
+    // Prepare the complex-to-complex single precision floating point FFT configuration
+    // structure for inputs of length `SAMPLES`. (You need only generate this once for a
+    // particular input size.)
+    cfg = ne10_fft_alloc_c2c_float32(SAMPLES);
 
-	// Pointer of src_input FFT
-	ne10_fft_cpx_float32_t *psrc_ddr; // = XPAR_DDR_MEM_BASEADDR; // Its posible to set memory baseaddress
-	// Pointer of dst_output FFT
-	ne10_fft_cpx_float32_t *pdst_ddr; // = XPAR_DDR_MEM_BASEADDR + 0x8000;
-	// Configuration variable FFT
-	ne10_fft_cfg_float32_t cfg;
+    // Generate test input values (with both real and imaginary components)
+    for (int i = 0; i < SAMPLES; i++)
+    {
+        src[i].r = (ne10_float32_t)rand() / RAND_MAX * 50.0f;
+        src[i].i = (ne10_float32_t)rand() / RAND_MAX * 50.0f;
+    }
 
-	// Variables to generate input and read output
-	uint32_t i;
+    // Perform the FFT (for an IFFT, the last parameter should be `1`)
+    ne10_fft_c2c_1d_float32(dst, src, cfg, 0);
 
+    // Display the results
+    for (int i = 0; i < SAMPLES; i++)
+    {
+        printf( "IN[%2d]: %10.4f + %10.4fi\t", i, src[i].r, src[i].i);
+        printf("OUT[%2d]: %10.4f + %10.4fi\n", i, dst[i].r, dst[i].i);
+    }
 
-	// Checking if NEON is avilable
-	if (ne10_init() != NE10_OK)
-	{
-		xil_printf("\nFailed to initialise Ne10.\n");
-		return 1;
-	}
+    // Free the allocated configuration structure
+    ne10_fft_destroy_c2c_float32(cfg);
 
-	// printf("***  Alloc memory to FFT test program  ***\n");
-	// printf("***********************************************\n");
-	// Configuration of pointers and coefficients of FFT.
-	cfg = ne10_fft_alloc_c2c_float32_neon(fftSize);
-	// Initialization of pointers src and dst
-	psrc_ddr = (ne10_fft_cpx_float32_t *) (cfg->buffer + (sizeof (ne10_fft_cpx_float32_t) * (fftSize)));
-	pdst_ddr = (ne10_fft_cpx_float32_t *) (psrc_ddr + (sizeof (ne10_fft_cpx_float32_t) * (fftSize)));
-
-	// Check if we can remove this part
-	if (cfg == NULL)
-	{
-		xil_printf("\nERROR! Alloc failed.\n");
-		return -1;
-	}
-
-
-	// printf("***  Generating the input to FFT test program  ***\n");
-	// printf("*******************************************************\n");
-	for (i = 0; i < NFFT; i++)
-	{
-		psrc_ddr[i] = (ne10_fft_cpx_float32_t) ...................;
-	}
-
-	// printf("***  Launch %d iters of FFT test program  ***\n", TEST_SAMPLES);
-	// printf("********************************************************\n");
-	for (int m = 0; m < TEST_SAMPLES; m++)
-	{
-		......................................
-	}
-
-	// printf("***  Time of execution of FFT test program  ***\n");
-	// printf("********************************************************\n");
-
-	printf("Time average of execution: %.4f us.\n", time_avg / TEST_SAMPLES);
-
-
-
-	// printf("***  Validation with the golden pattern  ***\n");
-	// printf("********************************************************\n");
-	....................................
-
-	
-
-	printf("***********************************************\n");
-	printf("***  End of FFT test program  ***\n");
-	printf("***********************************************\n");
-
-
-	return 0;
+    return 0;
 }

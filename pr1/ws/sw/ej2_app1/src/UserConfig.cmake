@@ -27,7 +27,6 @@ set(USER_UNDEFINED_SYMBOLS
 # Example 3: Adding ${CMAKE_SOURCE_DIR}/data/include to add data/include from this project.
 
 set(USER_INCLUDE_DIRECTORIES
-"."
 "../../../../sources/exercise2/Ne10-standalone-lib-arm32/inc"
 )
 
@@ -36,7 +35,7 @@ set(USER_INCLUDE_DIRECTORIES
 #Example 2: Adding ../../common/helloworld.c will consider the path as relative to this component directory
 #Example 3: Adding ${MY_ENV}/data/helloworld.c are expanded using project-specific environment settings.
 set(USER_COMPILE_SOURCES
-"main.cc"
+"../main.cc"
 )
 
 # -----------------------------------------
@@ -94,7 +93,7 @@ set(USER_COMPILE_RELAXATION "-Wl,--no-relax")
 set(USER_COMPILE_GARBAGE "")
 # Add any compiler options that are not covered by the above variables, they will be added as extra compiler options
 # To enable profiling -pg [ for gprof ]  or -p [ for prof information ]
-set(USER_COMPILE_OTHER_FLAGS "")
+set(USER_COMPILE_OTHER_FLAGS )
 
 # -----------------------------------------
 

@@ -28,7 +28,6 @@ int main(){
         (unsigned int)loop_ticks,
         (unsigned int)(us_interval / 1000U),
         (unsigned int)(us_interval % 1000U));
-    
-    
+        
     return 0;
 }

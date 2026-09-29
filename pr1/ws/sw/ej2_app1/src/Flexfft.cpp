@@ -1,18 +1,15 @@
 #include "Flexfft.h"
 
 #include "W_coef.h"
-#include "xil_printf.h"
 
 
 void FlexFFT(sampleOutX_t datain[FFT_LENGTH], sampleOutX_t dataout[FFT_LENGTH])
 {
-		xil_printf("Check\n");
 	int n=0;
 	int m=0;
 	int p=0;
 	sampleCoefX_t W_i[FFT_NFFT_MAX][FFT_LENGTH];
 	sampleOutX_t data_int[FFT_NFFT_MAX+1][FFT_LENGTH];
-
 
 	for (m=0; m<FFT_LENGTH; m++)
 	{

@@ -13,6 +13,11 @@ pr1/ws/hw/project_1.xpr
 # Solo permito contenido de src
 !**/ws/sw/*/src/**
 
+!**/sources/exercise2/
+!**/ne10-master/
+
+
+
 # Vivado cache/state
 **/.cache/**
 **/.Xil/**

@@ -109,10 +109,16 @@ int main()
     u32 load       = XScuTimer_GetLoadReg(TIMER_DEVICE_BASEADDR);
     u32 loop_ticks = load - XScuTimer_GetCounterValue(&TimerInstance);
     u32 us_interval = (u32)(((u64)loop_ticks * 1000000ULL) / (u64)TIMER_FREQ);
-    xil_printf("FlexFFT took: %u ticks\nInterval: %u ms %u us\n",
+    u32 avg_ticks  = loop_ticks / TEST_SAMPLES;
+    u32 avg_us     = us_interval / TEST_SAMPLES;
+
+    xil_printf("FlexFFT total: %u ticks\nInterval total: %u ms %u us\n"
+               "Average per iteration: %u ticks / %u us\n",
         (unsigned int)loop_ticks,
         (unsigned int)(us_interval / 1000U),
-        (unsigned int)(us_interval % 1000U));
+        (unsigned int)(us_interval % 1000U),
+        (unsigned int)avg_ticks,
+        (unsigned int)avg_us);
 
 
 	// printf("***  Validation with the golden pattern  ***\n");

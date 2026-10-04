@@ -5,6 +5,12 @@
 #include "xparameters.h"
 #include "xil_printf.h"
 #include <complex>
+
+#include "xparameters.h"
+#include "xparameters_ps.h"
+#include "xscutimer.h"
+#include "common.hpp"
+
 using namespace std;
 typedef std::complex<float> sampleInX_t;
 typedef std::complex<float> sampleOutX_t;
@@ -26,6 +32,7 @@ typedef std::complex<float> sampleOutX_t;
 // Number of iterations
 #define TEST_SAMPLES	1000
 
+XScuTimer TimerInstance;
 
 int main()
 {
@@ -33,7 +40,9 @@ int main()
 	printf("***  Launching the FFT test program (%d) ***\n", NFFT);
 	printf("******************************************************\n");
 
-
+    if (init_timer(&TimerInstance, TIMER_DEVICE_BASEADDR) != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
 	// Size of FFT
 	ne10_int32_t fftSize = NFFT;
 
@@ -75,24 +84,35 @@ int main()
 	// printf("*******************************************************\n");
 	for (i = 0; i < NFFT; i++)
 	{
-		//psrc_ddr[i] = (ne10_fft_cpx_float32_t) std::complex<float>DataIn[i];
+		//psrc_ddr[i] = (ne10_fft_cpx_float32_t) DataIn[i];
 		psrc_ddr[i].r = DataIn[i].real();
-		psrc_ddr[i].r = DataIn[i].imag();
+		psrc_ddr[i].i = DataIn[i].imag();
 		//psrc_ddr[i]= {DataIn[i].real(), DataIn[i].imag()};
 	}
+	
 
 	// printf("***  Launch %d iters of FFT test program  ***\n", TEST_SAMPLES);
 	// printf("********************************************************\n");
+	XScuTimer_Start(&TimerInstance);
+
 	for (int m = 0; m < TEST_SAMPLES; m++)
 	{
-		//......................................
-	}
+		ne10_fft_c2c_1d_float32(pdst_ddr, psrc_ddr, cfg, 0);
+	};
+    XScuTimer_Stop(&TimerInstance);
+
 
 	// printf("***  Time of execution of FFT test program  ***\n");
 	// printf("********************************************************\n");
 
-	printf("Time average of execution: %.4f us.\n", time_avg / TEST_SAMPLES);
-
+	//printf("Time average of execution: %.4f us.\n", time_avg / TEST_SAMPLES);
+    u32 load       = XScuTimer_GetLoadReg(TIMER_DEVICE_BASEADDR);
+    u32 loop_ticks = load - XScuTimer_GetCounterValue(&TimerInstance);
+    u32 us_interval = (u32)(((u64)loop_ticks * 1000000ULL) / (u64)TIMER_FREQ);
+    xil_printf("FlexFFT took: %u ticks\nInterval: %u ms %u us\n",
+        (unsigned int)loop_ticks,
+        (unsigned int)(us_interval / 1000U),
+        (unsigned int)(us_interval % 1000U));
 
 
 	// printf("***  Validation with the golden pattern  ***\n");

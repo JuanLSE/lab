@@ -125,7 +125,23 @@ int main()
 	// printf("********************************************************\n");
 	//....................................
 
-	
+
+
+ //average error:
+	float total_real_error = 0.0f;
+	float total_imag_error = 0.0f;
+	for (i = 0; i < NFFT; i++)
+	{
+		const float real_error = fabsf(pdst_ddr[i].r - DataOut_OK[i].real());
+		const float imag_error = fabsf(pdst_ddr[i].i - DataOut_OK[i].imag());
+		total_real_error += real_error;
+		total_imag_error += imag_error;
+	}
+	const float avg_real_error = total_real_error / NFFT;
+	const float avg_imag_error = total_imag_error / NFFT;
+	printf("Average real error: %f\n", avg_real_error);
+	printf("Average imag error: %f\n", avg_imag_error);
+ 
 
 	printf("***********************************************\n");
 	printf("***  End of FFT test program  ***\n");

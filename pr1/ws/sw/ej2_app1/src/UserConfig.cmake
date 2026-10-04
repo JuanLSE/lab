@@ -38,7 +38,6 @@ set(USER_INCLUDE_DIRECTORIES
 set(USER_COMPILE_SOURCES
 "main.cc"
 "Flexfft.cpp"
-"../main.cc"
 )
 
 # -----------------------------------------

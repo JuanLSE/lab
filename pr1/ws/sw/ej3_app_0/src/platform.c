@@ -5,6 +5,7 @@
 
 #include "xparameters.h"
 #include "xil_cache.h"
+#include "platform.h"
 
 #ifndef SDT
 #include "platform_config.h"

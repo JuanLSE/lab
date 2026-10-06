@@ -1,3 +1,556 @@
+*****************************************************
+***  Launching the FFT test program (512) ***
+******************************************************
+FlexFFT total: 8469327 ticks
+Interval total: 25 ms 407 us
+Average per iteration: 8469 ticks / 25 us
+i=0 
+DataoutOK real = 257.775238 pdst_ddr real = 257.775269
+DataoutOK imag = 0.000000 pdst_ddr imag = 0.000000
+i=1 
+DataoutOK real = 1.780964 pdst_ddr real = 1.780965
+DataoutOK imag = -0.030681 pdst_ddr imag = -0.030681
+i=2 
+DataoutOK real = 1.797611 pdst_ddr real = 1.797611
+DataoutOK imag = -0.062120 pdst_ddr imag = -0.062120
+i=3 
+DataoutOK real = 1.826202 pdst_ddr real = 1.826203
+DataoutOK imag = -0.095131 pdst_ddr imag = -0.095131
+i=4 
+DataoutOK real = 1.868112 pdst_ddr real = 1.868117
+DataoutOK imag = -0.130660 pdst_ddr imag = -0.130668
+i=5 
+DataoutOK real = 1.925502 pdst_ddr real = 1.925502
+DataoutOK imag = -0.169870 pdst_ddr imag = -0.169869
+i=6 
+DataoutOK real = 2.001623 pdst_ddr real = 2.001624
+DataoutOK imag = -0.214276 pdst_ddr imag = -0.214275
+i=7 
+DataoutOK real = 2.101336 pdst_ddr real = 2.101336
+DataoutOK imag = -0.265958 pdst_ddr imag = -0.265958
+i=8 
+DataoutOK real = 2.232021 pdst_ddr real = 2.232027
+DataoutOK imag = -0.327920 pdst_ddr imag = -0.327923
+i=9 
+DataoutOK real = 2.405236 pdst_ddr real = 2.405235
+DataoutOK imag = -0.404723 pdst_ddr imag = -0.404722
+i=10 
+DataoutOK real = 2.639951 pdst_ddr real = 2.639951
+DataoutOK imag = -0.503732 pdst_ddr imag = -0.503732
+i=11 
+DataoutOK real = 2.969391 pdst_ddr real = 2.969391
+DataoutOK imag = -0.637727 pdst_ddr imag = -0.637726
+i=12 
+DataoutOK real = 3.457265 pdst_ddr real = 3.457270
+DataoutOK imag = -0.831097 pdst_ddr imag = -0.831097
+i=13 
+DataoutOK real = 4.242760 pdst_ddr real = 4.242758
+DataoutOK imag = -1.137008 pdst_ddr imag = -1.137007
+i=14 
+DataoutOK real = 5.698807 pdst_ddr real = 5.698806
+DataoutOK imag = -1.697776 pdst_ddr imag = -1.697776
+i=15 
+DataoutOK real = 9.276466 pdst_ddr real = 9.276464
+DataoutOK imag = -3.066971 pdst_ddr imag = -3.066971
+i=16 
+DataoutOK real = 31.542894 pdst_ddr real = 31.542892
+DataoutOK imag = -11.564383 pdst_ddr imag = -11.564381
+i=17 
+DataoutOK real = -18.514149 pdst_ddr real = -18.514149
+DataoutOK imag = 7.527766 pdst_ddr imag = 7.527767
+i=18 
+DataoutOK real = -6.629226 pdst_ddr real = -6.629228
+DataoutOK imag = 2.992173 pdst_ddr imag = 2.992174
+i=19 
+DataoutOK real = -3.835806 pdst_ddr real = -3.835810
+DataoutOK imag = 1.925476 pdst_ddr imag = 1.925477
+i=20 
+DataoutOK real = -2.590554 pdst_ddr real = -2.590568
+DataoutOK imag = 1.450185 pdst_ddr imag = 1.450187
+i=21 
+DataoutOK real = -1.886848 pdst_ddr real = -1.886836
+DataoutOK imag = 1.182333 pdst_ddr imag = 1.182332
+i=22 
+DataoutOK real = -1.435047 pdst_ddr real = -1.435045
+DataoutOK imag = 1.011473 pdst_ddr imag = 1.011474
+i=23 
+DataoutOK real = -1.120635 pdst_ddr real = -1.120635
+DataoutOK imag = 0.893979 pdst_ddr imag = 0.893979
+i=24 
+DataoutOK real = -0.889246 pdst_ddr real = -0.889252
+DataoutOK imag = 0.809186 pdst_ddr imag = 0.809187
+i=25 
+DataoutOK real = -0.711751 pdst_ddr real = -0.711734
+DataoutOK imag = 0.746088 pdst_ddr imag = 0.746090
+i=26 
+DataoutOK real = -0.571135 pdst_ddr real = -0.571127
+DataoutOK imag = 0.698328 pdst_ddr imag = 0.698330
+i=27 
+DataoutOK real = -0.456784 pdst_ddr real = -0.456777
+DataoutOK imag = 0.662040 pdst_ddr imag = 0.662042
+i=28 
+DataoutOK real = -0.361727 pdst_ddr real = -0.361716
+DataoutOK imag = 0.634804 pdst_ddr imag = 0.634809
+i=29 
+DataoutOK real = -0.281183 pdst_ddr real = -0.281196
+DataoutOK imag = 0.615122 pdst_ddr imag = 0.615110
+i=30 
+DataoutOK real = -0.211751 pdst_ddr real = -0.211751
+DataoutOK imag = 0.602145 pdst_ddr imag = 0.602141
+i=31 
+DataoutOK real = -0.150921 pdst_ddr real = -0.150921
+DataoutOK imag = 0.595543 pdst_ddr imag = 0.595542
+i=32 
+DataoutOK real = -0.096773 pdst_ddr real = -0.096771
+DataoutOK imag = 0.595497 pdst_ddr imag = 0.595498
+i=33 
+DataoutOK real = -0.047762 pdst_ddr real = -0.047764
+DataoutOK imag = 0.602786 pdst_ddr imag = 0.602780
+i=34 
+DataoutOK real = -0.002563 pdst_ddr real = -0.002563
+DataoutOK imag = 0.619060 pdst_ddr imag = 0.619057
+i=35 
+DataoutOK real = 0.040102 pdst_ddr real = 0.040102
+DataoutOK imag = 0.647429 pdst_ddr imag = 0.647427
+i=36 
+DataoutOK real = 0.081689 pdst_ddr real = 0.081688
+DataoutOK imag = 0.693828 pdst_ddr imag = 0.693824
+i=37 
+DataoutOK real = 0.124316 pdst_ddr real = 0.124329
+DataoutOK imag = 0.770485 pdst_ddr imag = 0.770505
+i=38 
+DataoutOK real = 0.172127 pdst_ddr real = 0.172130
+DataoutOK imag = 0.906446 pdst_ddr imag = 0.906448
+i=39 
+DataoutOK real = 0.236721 pdst_ddr real = 0.236723
+DataoutOK imag = 1.190383 pdst_ddr imag = 1.190384
+i=40 
+DataoutOK real = 0.376374 pdst_ddr real = 0.376377
+DataoutOK imag = 2.080942 pdst_ddr imag = 2.080943
+i=41 
+DataoutOK real = -5.145935 pdst_ddr real = -5.145933
+DataoutOK imag = -41.837364 pdst_ddr imag = -41.837372
+i=42 
+DataoutOK real = -0.000717 pdst_ddr real = -0.000714
+DataoutOK imag = -1.305326 pdst_ddr imag = -1.305327
+i=43 
+DataoutOK real = 0.123370 pdst_ddr real = 0.123372
+DataoutOK imag = -0.513251 pdst_ddr imag = -0.513251
+i=44 
+DataoutOK real = 0.180909 pdst_ddr real = 0.180910
+DataoutOK imag = -0.243183 pdst_ddr imag = -0.243184
+i=45 
+DataoutOK real = 0.221141 pdst_ddr real = 0.221146
+DataoutOK imag = -0.106830 pdst_ddr imag = -0.106835
+i=46 
+DataoutOK real = 0.254368 pdst_ddr real = 0.254369
+DataoutOK imag = -0.024064 pdst_ddr imag = -0.024063
+i=47 
+DataoutOK real = 0.284180 pdst_ddr real = 0.284182
+DataoutOK imag = 0.032197 pdst_ddr imag = 0.032198
+i=48 
+DataoutOK real = 0.312230 pdst_ddr real = 0.312231
+DataoutOK imag = 0.073674 pdst_ddr imag = 0.073672
+i=49 
+DataoutOK real = 0.339436 pdst_ddr real = 0.339436
+DataoutOK imag = 0.106286 pdst_ddr imag = 0.106291
+i=50 
+DataoutOK real = 0.366398 pdst_ddr real = 0.366398
+DataoutOK imag = 0.133375 pdst_ddr imag = 0.133375
+i=51 
+DataoutOK real = 0.393564 pdst_ddr real = 0.393565
+DataoutOK imag = 0.156997 pdst_ddr imag = 0.156998
+i=52 
+DataoutOK real = 0.421311 pdst_ddr real = 0.421313
+DataoutOK imag = 0.178519 pdst_ddr imag = 0.178519
+i=53 
+DataoutOK real = 0.449992 pdst_ddr real = 0.449990
+DataoutOK imag = 0.198918 pdst_ddr imag = 0.198923
+i=54 
+DataoutOK real = 0.479958 pdst_ddr real = 0.479962
+DataoutOK imag = 0.218950 pdst_ddr imag = 0.218949
+i=55 
+DataoutOK real = 0.511589 pdst_ddr real = 0.511592
+DataoutOK imag = 0.239247 pdst_ddr imag = 0.239245
+i=56 
+DataoutOK real = 0.545309 pdst_ddr real = 0.545313
+DataoutOK imag = 0.260388 pdst_ddr imag = 0.260387
+i=57 
+DataoutOK real = 0.581614 pdst_ddr real = 0.581623
+DataoutOK imag = 0.282945 pdst_ddr imag = 0.282943
+i=58 
+DataoutOK real = 0.621098 pdst_ddr real = 0.621096
+DataoutOK imag = 0.307532 pdst_ddr imag = 0.307534
+i=59 
+DataoutOK real = 0.664493 pdst_ddr real = 0.664494
+DataoutOK imag = 0.334846 pdst_ddr imag = 0.334847
+i=60 
+DataoutOK real = 0.712726 pdst_ddr real = 0.712728
+DataoutOK imag = 0.365730 pdst_ddr imag = 0.365731
+i=61 
+DataoutOK real = 0.766993 pdst_ddr real = 0.767000
+DataoutOK imag = 0.401239 pdst_ddr imag = 0.401239
+i=62 
+DataoutOK real = 0.828879 pdst_ddr real = 0.828875
+DataoutOK imag = 0.442751 pdst_ddr imag = 0.442752
+i=63 
+DataoutOK real = 0.900543 pdst_ddr real = 0.900542
+DataoutOK imag = 0.492130 pdst_ddr imag = 0.492130
+i=64 
+DataoutOK real = 0.985008 pdst_ddr real = 0.985010
+DataoutOK imag = 0.551978 pdst_ddr imag = 0.551976
+i=65 
+DataoutOK real = 1.086662 pdst_ddr real = 1.086666
+DataoutOK imag = 0.626074 pdst_ddr imag = 0.626076
+i=66 
+DataoutOK real = 1.212139 pdst_ddr real = 1.212134
+DataoutOK imag = 0.720143 pdst_ddr imag = 0.720140
+i=67 
+DataoutOK real = 1.371983 pdst_ddr real = 1.371982
+DataoutOK imag = 0.843300 pdst_ddr imag = 0.843300
+i=68 
+DataoutOK real = 1.584070 pdst_ddr real = 1.584070
+DataoutOK imag = 1.011030 pdst_ddr imag = 1.011030
+i=69 
+DataoutOK real = 1.881346 pdst_ddr real = 1.881343
+DataoutOK imag = 1.251924 pdst_ddr imag = 1.251924
+i=70 
+DataoutOK real = 2.332035 pdst_ddr real = 2.332041
+DataoutOK imag = 1.625268 pdst_ddr imag = 1.625269
+i=71 
+DataoutOK real = 3.104295 pdst_ddr real = 3.104298
+DataoutOK imag = 2.277324 pdst_ddr imag = 2.277325
+i=72 
+DataoutOK real = 4.755340 pdst_ddr real = 4.755342
+DataoutOK imag = 3.693013 pdst_ddr imag = 3.693016
+i=73 
+DataoutOK real = 10.903470 pdst_ddr real = 10.903475
+DataoutOK imag = 9.021949 pdst_ddr imag = 9.021952
+i=74 
+DataoutOK real = -28.041632 pdst_ddr real = -28.041641
+DataoutOK imag = -24.905085 pdst_ddr imag = -24.905094
+i=75 
+DataoutOK real = -5.725458 pdst_ddr real = -5.725460
+DataoutOK imag = -5.505319 pdst_ddr imag = -5.505321
+i=76 
+DataoutOK real = -3.037064 pdst_ddr real = -3.037065
+DataoutOK imag = -3.194005 pdst_ddr imag = -3.194005
+i=77 
+DataoutOK real = -1.978882 pdst_ddr real = -1.978881
+DataoutOK imag = -2.304343 pdst_ddr imag = -2.304342
+i=78 
+DataoutOK real = -1.404766 pdst_ddr real = -1.404768
+DataoutOK imag = -1.838979 pdst_ddr imag = -1.838988
+i=79 
+DataoutOK real = -1.037946 pdst_ddr real = -1.037947
+DataoutOK imag = -1.557439 pdst_ddr imag = -1.557439
+i=80 
+DataoutOK real = -0.777908 pdst_ddr real = -0.777908
+DataoutOK imag = -1.372788 pdst_ddr imag = -1.372788
+i=81 
+DataoutOK real = -0.579150 pdst_ddr real = -0.579150
+DataoutOK imag = -1.246104 pdst_ddr imag = -1.246103
+i=82 
+DataoutOK real = -0.417852 pdst_ddr real = -0.417853
+DataoutOK imag = -1.157511 pdst_ddr imag = -1.157528
+i=83 
+DataoutOK real = -0.280090 pdst_ddr real = -0.280090
+DataoutOK imag = -1.095973 pdst_ddr imag = -1.095975
+i=84 
+DataoutOK real = -0.156905 pdst_ddr real = -0.156903
+DataoutOK imag = -1.055076 pdst_ddr imag = -1.055078
+i=85 
+DataoutOK real = -0.041938 pdst_ddr real = -0.041938
+DataoutOK imag = -1.031089 pdst_ddr imag = -1.031090
+i=86 
+DataoutOK real = 0.069840 pdst_ddr real = 0.069842
+DataoutOK imag = -1.022023 pdst_ddr imag = -1.022036
+i=87 
+DataoutOK real = 0.182934 pdst_ddr real = 0.182933
+DataoutOK imag = -1.027189 pdst_ddr imag = -1.027190
+i=88 
+DataoutOK real = 0.301958 pdst_ddr real = 0.301959
+DataoutOK imag = -1.047060 pdst_ddr imag = -1.047060
+i=89 
+DataoutOK real = 0.432286 pdst_ddr real = 0.432287
+DataoutOK imag = -1.083378 pdst_ddr imag = -1.083379
+i=90 
+DataoutOK real = 0.580927 pdst_ddr real = 0.580933
+DataoutOK imag = -1.139548 pdst_ddr imag = -1.139554
+i=91 
+DataoutOK real = 0.757966 pdst_ddr real = 0.757965
+DataoutOK imag = -1.221511 pdst_ddr imag = -1.221511
+i=92 
+DataoutOK real = 0.979237 pdst_ddr real = 0.979236
+DataoutOK imag = -1.339537 pdst_ddr imag = -1.339536
+i=93 
+DataoutOK real = 1.271947 pdst_ddr real = 1.271947
+DataoutOK imag = -1.512134 pdst_ddr imag = -1.512134
+i=94 
+DataoutOK real = 1.688061 pdst_ddr real = 1.688056
+DataoutOK imag = -1.775475 pdst_ddr imag = -1.775467
+i=95 
+DataoutOK real = 2.341927 pdst_ddr real = 2.341929
+DataoutOK imag = -2.209981 pdst_ddr imag = -2.209984
+i=96 
+DataoutOK real = 3.545827 pdst_ddr real = 3.545831
+DataoutOK imag = -3.036198 pdst_ddr imag = -3.036197
+i=97 
+DataoutOK real = 6.569150 pdst_ddr real = 6.569153
+DataoutOK imag = -5.151913 pdst_ddr imag = -5.151915
+i=98 
+DataoutOK real = 29.380985 pdst_ddr real = 29.380989
+DataoutOK imag = -21.270260 pdst_ddr imag = -21.270266
+i=99 
+DataoutOK real = -13.319232 pdst_ddr real = -13.319233
+DataoutOK imag = 8.960468 pdst_ddr imag = 8.960468
+i=100 
+DataoutOK real = -5.651167 pdst_ddr real = -5.651165
+DataoutOK imag = 3.553327 pdst_ddr imag = 3.553327
+i=101 
+DataoutOK real = -3.663597 pdst_ddr real = -3.663593
+DataoutOK imag = 2.163865 pdst_ddr imag = 2.163865
+i=102 
+DataoutOK real = -2.746349 pdst_ddr real = -2.746335
+DataoutOK imag = 1.530459 pdst_ddr imag = 1.530456
+i=103 
+DataoutOK real = -2.216080 pdst_ddr real = -2.216089
+DataoutOK imag = 1.169754 pdst_ddr imag = 1.169756
+i=104 
+DataoutOK real = -1.869275 pdst_ddr real = -1.869278
+DataoutOK imag = 0.937871 pdst_ddr imag = 0.937872
+i=105 
+DataoutOK real = -1.623962 pdst_ddr real = -1.623964
+DataoutOK imag = 0.776905 pdst_ddr imag = 0.776906
+i=106 
+DataoutOK real = -1.440751 pdst_ddr real = -1.440755
+DataoutOK imag = 0.659070 pdst_ddr imag = 0.659072
+i=107 
+DataoutOK real = -1.298351 pdst_ddr real = -1.298351
+DataoutOK imag = 0.569375 pdst_ddr imag = 0.569374
+i=108 
+DataoutOK real = -1.184242 pdst_ddr real = -1.184244
+DataoutOK imag = 0.499026 pdst_ddr imag = 0.499027
+i=109 
+DataoutOK real = -1.090575 pdst_ddr real = -1.090576
+DataoutOK imag = 0.442527 pdst_ddr imag = 0.442527
+i=110 
+DataoutOK real = -1.012177 pdst_ddr real = -1.012177
+DataoutOK imag = 0.396267 pdst_ddr imag = 0.396268
+i=111 
+DataoutOK real = -0.945497 pdst_ddr real = -0.945500
+DataoutOK imag = 0.357781 pdst_ddr imag = 0.357778
+i=112 
+DataoutOK real = -0.888017 pdst_ddr real = -0.888021
+DataoutOK imag = 0.325326 pdst_ddr imag = 0.325329
+i=113 
+DataoutOK real = -0.837900 pdst_ddr real = -0.837901
+DataoutOK imag = 0.297639 pdst_ddr imag = 0.297638
+i=114 
+DataoutOK real = -0.793771 pdst_ddr real = -0.793776
+DataoutOK imag = 0.273782 pdst_ddr imag = 0.273778
+i=115 
+DataoutOK real = -0.754585 pdst_ddr real = -0.754574
+DataoutOK imag = 0.253042 pdst_ddr imag = 0.253047
+i=116 
+DataoutOK real = -0.719529 pdst_ddr real = -0.719527
+DataoutOK imag = 0.234873 pdst_ddr imag = 0.234875
+i=117 
+DataoutOK real = -0.687961 pdst_ddr real = -0.687959
+DataoutOK imag = 0.218843 pdst_ddr imag = 0.218844
+i=118 
+DataoutOK real = -0.659368 pdst_ddr real = -0.659367
+DataoutOK imag = 0.204614 pdst_ddr imag = 0.204615
+i=119 
+DataoutOK real = -0.633336 pdst_ddr real = -0.633331
+DataoutOK imag = 0.191912 pdst_ddr imag = 0.191914
+i=120 
+DataoutOK real = -0.609524 pdst_ddr real = -0.609523
+DataoutOK imag = 0.180513 pdst_ddr imag = 0.180514
+i=121 
+DataoutOK real = -0.587652 pdst_ddr real = -0.587650
+DataoutOK imag = 0.170237 pdst_ddr imag = 0.170239
+i=122 
+DataoutOK real = -0.567484 pdst_ddr real = -0.567483
+DataoutOK imag = 0.160933 pdst_ddr imag = 0.160936
+i=123 
+DataoutOK real = -0.548825 pdst_ddr real = -0.548827
+DataoutOK imag = 0.152476 pdst_ddr imag = 0.152460
+i=124 
+DataoutOK real = -0.531505 pdst_ddr real = -0.531504
+DataoutOK imag = 0.144760 pdst_ddr imag = 0.144758
+i=125 
+DataoutOK real = -0.515382 pdst_ddr real = -0.515381
+DataoutOK imag = 0.137695 pdst_ddr imag = 0.137695
+i=126 
+DataoutOK real = -0.500333 pdst_ddr real = -0.500332
+DataoutOK imag = 0.131208 pdst_ddr imag = 0.131208
+i=127 
+DataoutOK real = -0.486253 pdst_ddr real = -0.486252
+DataoutOK imag = 0.125232 pdst_ddr imag = 0.125215
+i=128 
+DataoutOK real = -0.473048 pdst_ddr real = -0.473045
+DataoutOK imag = 0.119712 pdst_ddr imag = 0.119705
+i=129 
+DataoutOK real = -0.460638 pdst_ddr real = -0.460637
+DataoutOK imag = 0.114600 pdst_ddr imag = 0.114599
+i=130 
+DataoutOK real = -0.448953 pdst_ddr real = -0.448951
+DataoutOK imag = 0.109853 pdst_ddr imag = 0.109852
+i=131 
+DataoutOK real = -0.437929 pdst_ddr real = -0.437923
+DataoutOK imag = 0.105436 pdst_ddr imag = 0.105420
+i=132 
+DataoutOK real = -0.427513 pdst_ddr real = -0.427513
+DataoutOK imag = 0.101317 pdst_ddr imag = 0.101317
+i=133 
+DataoutOK real = -0.417653 pdst_ddr real = -0.417652
+DataoutOK imag = 0.097467 pdst_ddr imag = 0.097467
+i=134 
+DataoutOK real = -0.408307 pdst_ddr real = -0.408305
+DataoutOK imag = 0.093861 pdst_ddr imag = 0.093861
+i=135 
+DataoutOK real = -0.399436 pdst_ddr real = -0.399432
+DataoutOK imag = 0.090478 pdst_ddr imag = 0.090478
+i=136 
+DataoutOK real = -0.391004 pdst_ddr real = -0.391004
+DataoutOK imag = 0.087299 pdst_ddr imag = 0.087299
+i=137 
+DataoutOK real = -0.382979 pdst_ddr real = -0.382978
+DataoutOK imag = 0.084305 pdst_ddr imag = 0.084305
+i=138 
+DataoutOK real = -0.375333 pdst_ddr real = -0.375331
+DataoutOK imag = 0.081482 pdst_ddr imag = 0.081482
+i=139 
+DataoutOK real = -0.368040 pdst_ddr real = -0.368036
+DataoutOK imag = 0.078815 pdst_ddr imag = 0.078816
+i=140 
+DataoutOK real = -0.361076 pdst_ddr real = -0.361076
+DataoutOK imag = 0.076292 pdst_ddr imag = 0.076292
+i=141 
+DataoutOK real = -0.354419 pdst_ddr real = -0.354418
+DataoutOK imag = 0.073902 pdst_ddr imag = 0.073902
+i=142 
+DataoutOK real = -0.348051 pdst_ddr real = -0.348048
+DataoutOK imag = 0.071634 pdst_ddr imag = 0.071634
+i=143 
+DataoutOK real = -0.341953 pdst_ddr real = -0.341944
+DataoutOK imag = 0.069480 pdst_ddr imag = 0.069478
+i=144 
+DataoutOK real = -0.336109 pdst_ddr real = -0.336112
+DataoutOK imag = 0.067431 pdst_ddr imag = 0.067436
+i=145 
+DataoutOK real = -0.330503 pdst_ddr real = -0.330504
+DataoutOK imag = 0.065479 pdst_ddr imag = 0.065481
+i=146 
+DataoutOK real = -0.325123 pdst_ddr real = -0.325121
+DataoutOK imag = 0.063619 pdst_ddr imag = 0.063619
+i=147 
+DataoutOK real = -0.319954 pdst_ddr real = -0.319948
+DataoutOK imag = 0.061843 pdst_ddr imag = 0.061844
+i=148 
+DataoutOK real = -0.314985 pdst_ddr real = -0.314991
+DataoutOK imag = 0.060145 pdst_ddr imag = 0.060145
+i=149 
+DataoutOK real = -0.310206 pdst_ddr real = -0.310207
+DataoutOK imag = 0.058521 pdst_ddr imag = 0.058522
+i=150 
+DataoutOK real = -0.305606 pdst_ddr real = -0.305605
+DataoutOK imag = 0.056966 pdst_ddr imag = 0.056968
+i=151 
+DataoutOK real = -0.301175 pdst_ddr real = -0.301170
+DataoutOK imag = 0.055475 pdst_ddr imag = 0.055478
+i=152 
+DataoutOK real = -0.296906 pdst_ddr real = -0.296916
+DataoutOK imag = 0.054044 pdst_ddr imag = 0.054041
+i=153 
+DataoutOK real = -0.292789 pdst_ddr real = -0.292793
+DataoutOK imag = 0.052670 pdst_ddr imag = 0.052670
+i=154 
+DataoutOK real = -0.288818 pdst_ddr real = -0.288822
+DataoutOK imag = 0.051349 pdst_ddr imag = 0.051349
+i=155 
+DataoutOK real = -0.284984 pdst_ddr real = -0.284991
+DataoutOK imag = 0.050078 pdst_ddr imag = 0.050077
+i=156 
+DataoutOK real = -0.281283 pdst_ddr real = -0.281275
+DataoutOK imag = 0.048854 pdst_ddr imag = 0.048857
+i=157 
+DataoutOK real = -0.277707 pdst_ddr real = -0.277705
+DataoutOK imag = 0.047674 pdst_ddr imag = 0.047676
+i=158 
+DataoutOK real = -0.274250 pdst_ddr real = -0.274250
+DataoutOK imag = 0.046536 pdst_ddr imag = 0.046535
+i=159 
+DataoutOK real = -0.270908 pdst_ddr real = -0.270907
+DataoutOK imag = 0.045437 pdst_ddr imag = 0.045439
+i=160 
+DataoutOK real = -0.267675 pdst_ddr real = -0.267676
+DataoutOK imag = 0.044375 pdst_ddr imag = 0.044371
+i=161 
+DataoutOK real = -0.264547 pdst_ddr real = -0.264547
+DataoutOK imag = 0.043348 pdst_ddr imag = 0.043349
+i=162 
+DataoutOK real = -0.261518 pdst_ddr real = -0.261518
+DataoutOK imag = 0.042355 pdst_ddr imag = 0.042357
+i=163 
+DataoutOK real = -0.258585 pdst_ddr real = -0.258584
+DataoutOK imag = 0.041394 pdst_ddr imag = 0.041397
+i=164 
+DataoutOK real = -0.255744 pdst_ddr real = -0.255749
+DataoutOK imag = 0.040462 pdst_ddr imag = 0.040450
+i=165 
+DataoutOK real = -0.252990 pdst_ddr real = -0.252991
+DataoutOK imag = 0.039558 pdst_ddr imag = 0.039557
+i=166 
+DataoutOK real = -0.250321 pdst_ddr real = -0.250322
+DataoutOK imag = 0.038682 pdst_ddr imag = 0.038681
+i=167 
+DataoutOK real = -0.247733 pdst_ddr real = -0.247734
+DataoutOK imag = 0.037830 pdst_ddr imag = 0.037831
+i=168 
+DataoutOK real = -0.245223 pdst_ddr real = -0.245222
+DataoutOK imag = 0.037004 pdst_ddr imag = 0.037000
+i=169 
+DataoutOK real = -0.242788 pdst_ddr real = -0.242788
+DataoutOK imag = 0.036200 pdst_ddr imag = 0.036202
+i=170 
+DataoutOK real = -0.240425 pdst_ddr real = -0.240425
+DataoutOK imag = 0.035418 pdst_ddr imag = 0.035419
+i=171 
+DataoutOK real = -0.238131 pdst_ddr real = -0.238131
+DataoutOK imag = 0.034657 pdst_ddr imag = 0.034658
+i=172 
+DataoutOK real = -0.235904 pdst_ddr real = -0.235901
+DataoutOK imag = 0.033917 pdst_ddr imag = 0.033909
+i=173 
+DataoutOK real = -0.233741 pdst_ddr real = -0.233741
+DataoutOK imag = 0.033195 pdst_ddr imag = 0.033197
+i=174 
+DataoutOK real = -0.231640 pdst_ddr real = -0.231641
+DataoutOK imag = 0.032491 pdst_ddr imag = 0.032494
+i=175 
+DataoutOK real = -0.229599 pdst_ddr real = -0.229600
+DataoutOK imag = 0.031805 pdst_ddr imag = 0.031809
+i=176 
+DataoutOK real = -0.227616 pdst_ddr real = -0.227628
+DataoutOK imag = 0.031135 pdst_ddr imag = 0.031171
+i=177 
+DataoutOK real = -0.225689 pdst_ddr real = -0.225688
+DataoutOK imag = 0.030481 pdst_ddr imag = 0.030477
+i=178 
+DataoutOK real = -0.223816 pdst_ddr real = -0.223815
+DataoutOK imag = 0.029842 pdst_ddr imag = 0.029841
+i=179 
+DataoutOK real = -0.221995 pdst_ddr real = -0.221995
+DataoutOK imag = 0.029218 pdst_ddr imag = 0.029218
+Average real error: 0.000001
+Average imag error: 0.000001
+***********************************************
+***  End of FFT test program  ***
+***********************************************
+
+
 DataoutOK real = -0.238131 pdst_ddr real = -0.238131
 DataoutOK imag = 0.034657 pdst_ddr imag = 0.034658
 i=172 

@@ -7,8 +7,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 /*
  * Este fichero implementa dos funciones en ensamblador que aprovecha la infra-
- * estructura del ARM para implementar un semáforo (mutex). Una función sirve
- * para el cierre del semáforo (lock_mutex) y la otra para la apertura
+ * estructura del ARM para implementar un semï¿½foro (mutex). Una funciï¿½n sirve
+ * para el cierre del semï¿½foro (lock_mutex) y la otra para la apertura
  * (unlock_mutex).
  */
 ///////////////////////////////////////////////////////////////////////////////
@@ -23,8 +23,14 @@
 #define locked   1
 #define unlocked 0
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 extern void lock_mutex(void* mutex);
 extern void unlock_mutex(void* mutex);
+#ifdef __cplusplus
+}
+#endif
 
 
 #endif /* MUTEX_BLK_H_ */

@@ -134,6 +134,13 @@ int main()
 	{
 		const float real_error = fabsf(pdst_ddr[i].r - DataOut_OK[i].real());
 		const float imag_error = fabsf(pdst_ddr[i].i - DataOut_OK[i].imag());
+		/*
+		printf("i=%d \nDataoutOK real = %f pdst_ddr real = %f\nDataoutOK imag = %f pdst_ddr imag = %f\n", i,
+         DataOut_OK[i].real(), 
+         pdst_ddr[i].r, 
+         DataOut_OK[i].imag(), 
+         pdst_ddr[i].i);
+		*/
 		total_real_error += real_error;
 		total_imag_error += imag_error;
 	}

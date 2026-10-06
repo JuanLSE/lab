@@ -7,7 +7,7 @@
 #include "xscutimer.h"
 #include "common.hpp"
 #include "DataOut_OK.h"
-
+#include <stdio.h>
 XScuTimer TimerInstance;
 
 int main(){
@@ -38,13 +38,21 @@ int main(){
         // la funcion fabsf calcula el valor absoluto de un float
         const float real_error = fabsf(DataOut[i].real() - DataOut_OK[i].real());
         const float imag_error = fabsf(DataOut[i].imag() - DataOut_OK[i].imag());
+        /*
+        printf("i=%d \nDataoutOK real = %f Dataout real = %f\nDataoutOK imag = %f Dataout imag = %f\n", i,
+         DataOut_OK[i].real(), 
+         DataOut[i].real(), 
+         DataOut_OK[i].imag(), 
+         DataOut[i].imag());
+        */
+
         total_real_error += real_error;
         total_imag_error += imag_error;
     }
     const float avg_real_error = total_real_error / FFT_LENGTH;
     const float avg_imag_error = total_imag_error / FFT_LENGTH;
-    xil_printf("Average real error: %f\n", avg_real_error);
-    xil_printf("Average imag error: %f\n", avg_imag_error);
+    printf("Average real error: %f\n", avg_real_error);
+    printf("Average imag error: %f\n", avg_imag_error);
         
     return 0;
 }
